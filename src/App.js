@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import ScrollToTop from './Components/GlxTrvlProject/Containers/ScrollToTop';
+import Home from './Components/GlxTrvlProject/Pages/Home/Home'
+import Pricing from './Components/GlxTrvlProject/Pages/Pricing/Pricing'
+import Training from './Components/GlxTrvlProject/Pages/Training/Training'
+import ContactInformation from './Components/GlxTrvlProject/Pages/Contact/ContactInformation'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+      <ScrollToTop>
+      <Routes>
+         <Route path='/' exact element={<Home />} />
+            <Route path='/glxtrvl/pricing' exact element={<Pricing />} />
+            <Route path='/glxtrvl/training' exact element={<Training />} />
+            <Route path='/glxtrvl/contact' exact element={<ContactInformation />} />
+      </Routes>
+      </ScrollToTop>
+      </BrowserRouter>
+    </>
   );
 }
 

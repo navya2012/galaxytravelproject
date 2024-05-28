@@ -1,0 +1,22 @@
+
+/* navbar */
+.navbar{
+    /* background-color: black; */
+    position: fixed;
+    z-index: 9999999999;
+    width: 100%;
+}
+.colour{
+    background-color: black;
+}
+
+/* header */
+.header{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}

@@ -1,0 +1,17 @@
+
+/* card */
+.cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.cardData{
+    transition:  0.5s all;
+}
+
+.cardData:hover{
+    transform: scale(1.05);
+    background-color: rgba(255,255,255,0.1);
+}
